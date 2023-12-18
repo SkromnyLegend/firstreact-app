@@ -5,6 +5,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import {toogleLike} from "../../context/like"
+import {incCart} from "../../context/cartSlice"
 
 function Products({ data}) {
   const salom = useSelector(state => state.like.value)
@@ -13,7 +14,7 @@ function Products({ data}) {
     <div className="products__wrapper">
         {
             data?.map((el) => <div key={el.id} className="products__card">
-            <Link to={"/login"} className="products__image">
+            <Link to={`/product/${el.id}`} className="products__image">
               <img src={el.url} alt="" />
             </Link>
             <div className="products__body">
@@ -34,7 +35,7 @@ function Products({ data}) {
      
             
             </div>
-            <div className="products__cart">
+            <div onClick={()=> dispath(incCart(el))} className="products__cart">
               <IoCartOutline />
             </div>
           </div>)

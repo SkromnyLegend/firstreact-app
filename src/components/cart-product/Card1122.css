@@ -87,6 +87,7 @@ color: #555;margin-top: 10px;
     outline: none;
     border-radius: 10px;
     border: solid 2px #0002;
+    margin-left: 15px;
 }
 .card__regis p{
     margin-top: 20px;
@@ -96,12 +97,20 @@ color: #555;margin-top: 10px;
     margin-top: 20px;
     width: 80%;
     padding: 12px;
-    margin-left: 20px;
+    margin-left: 30px;
     background: var(--bg-py);
     border:  none;
     border-radius: 10px;
     font-size: 15px;
     color: #fff;
+}
+.card__regis h2{
+    text-align: center;
+
+}
+.ola{
+    padding-left: 80px;
+
 }
 @media screen and (max-width:1100px) {
     .card__wrapper{

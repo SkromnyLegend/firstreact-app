@@ -1,15 +1,15 @@
 import React from 'react'
 import Empty from '../../components/emty/Empty'
 import CartProduct from '../../components/cart-product/CartProduct'
-
+import { useSelector } from 'react-redux'
 
 function Cart() {
-  const cart = true
+  const cart = useSelector(s => s.cart.value)
   return (
     <div className='container'>
  
      {
-      !cart ?
+      !cart.length ?
 
       <Empty
        url="https://uzum.uz/static/img/shopocat.490a4a1.png"
@@ -18,7 +18,7 @@ function Cart() {
        btnTitel="Bosh sahifa"
        nav="/"
       /> :
-      <CartProduct/>
+      <CartProduct data={cart}/>
      }
       
     </div>

@@ -8,7 +8,7 @@ import Cart from "./router/cart/Cart"
 import NavbarBottom from './components/navbar-bottom/NavbarBottom';
 import Footer from './components/footer/Footer';
 import { PRODUCTS  } from './static';
-
+import SingleRoute from './router/single-route/SingleRoute';
 import { Routes,Route } from 'react-router-dom';
 import Notdef from './router/notdifend/Notdef';
 function App() {
@@ -23,6 +23,7 @@ function App() {
       <Route path='/login' element={<Login/>} />
       <Route  path='/wishes' element={<Wishes/>}/>
       <Route  path='/Cart' element={<Cart/>}/>
+      <Route path='/product/:id' element={<SingleRoute data={PRODUCTS}/>}/>
     </Routes>
     <Footer/>
 
